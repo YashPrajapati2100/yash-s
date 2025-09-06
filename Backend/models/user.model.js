@@ -5,6 +5,10 @@ const userScama= new mongoose.Schema ({
         type:String,
         required:true,
     },
+    lastname:{
+        required:true,
+        enum:["rara","tata"]
+    },
     email:{
         type:String,
         unique:true,
@@ -12,7 +16,7 @@ const userScama= new mongoose.Schema ({
         validate: {
         validator: validator.isEmail,
         message: "Please enter a valid email address",
-        },
+    },
 
     },
     phoneNumber:{
